@@ -21,7 +21,7 @@ app.post("/hook", function (req, res) {
   if (req.body.type === "test") {
     snekfetch.post(webhookurl).send({ "content": `<@${user_id}> voted <@${bot}> (This is a test)`}).then(r => {})
   } else {
-    snekfetch.post(webhookurl).send({ "content": `<@${user_id}> voted <@${bot}>`}).then(r => {})
+    snekfetch.post(webhookurl).send({ "content": `Thank you <@${user_id}> for voting <@${bot}>`}).then(r => {})
 }
     res.send({code: "success"});
 });
