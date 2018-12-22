@@ -1,5 +1,4 @@
 var express = require('express');
-var snekfetch = require('snekfetch')
 var app = express();
 var config = require('./config.json')
 
@@ -19,9 +18,7 @@ app.post("/hook", function (req, res) {
     var user_id = req.body.user;
     var bot = req.body.bot;
   if (req.body.type === "test") {
-    snekfetch.post(webhookurl).send({ "content": `<@${user_id}> voted <@${bot}> (This is a test)`}).then(r => {})
   } else {
-    snekfetch.post(webhookurl).send({ "content": `Thank you <@${user_id}> for voting <@${bot}>`}).then(r => {})
 }
     res.send({code: "success"});
 });

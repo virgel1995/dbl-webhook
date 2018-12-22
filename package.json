@@ -7,8 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "snekfetch": "^4.0.0"
+    "express": "^4.16.4"
   },
   "engines": {
     "node": "8.x"
