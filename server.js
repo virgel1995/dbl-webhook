@@ -1,9 +1,10 @@
-var express = require('express');
-var app = express();
-var config = require('./config.json')
+const express = require('express');
+const app = express();
+const phin = require('phin')
+const config = require('./config.json')
 
-var webhookurl = config.webhookurl
-var bodyParser = require('body-parser');
+const webhookurl = config.webhookurl
+const bodyParser = require('body-parser');
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -13,13 +14,19 @@ app.get("/", function (req, res) {
   res.send("dis is not a website kthx")
 });
 
-app.post("/hook", function (req, res) {
+app.post("/hook", async (req, res) => {
   if (req.headers.authorization !== config.auth) return res.send({code: "invalid auth"})
-    var user_id = req.body.user;
-    var bot = req.body.bot;
-  if (req.body.type === "test") {
-  } else {
-}
+  let user_id = req.body.user;
+  let bot = req.body.bot;
+  let content = `<@${user_id}> voted <@${bot}>`
+  if (req.body.type === "test") content = content + '  (This is a test)'
+  phin({
+    url: webhookurl,
+    method: 'POST',
+    data: {
+        content: content
+    }
+})
     res.send({code: "success"});
 });
 

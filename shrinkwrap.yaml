@@ -1,5 +1,6 @@
 dependencies:
   express: 4.16.4
+  phin: 3.2.0
 packages:
   /accepts/1.3.5:
     dependencies:
@@ -37,6 +38,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg=
+  /centra/2.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-iJ7ZztQUHG7h8Dw7+4bLzCX9PfsDiK2CPfuElOAmTOfAmmbfCDbngcYgeyQWFartWv7mhNUlbfHMVkF8gsa5xA==
   /content-disposition/0.5.2:
     dev: false
     engines:
@@ -250,6 +255,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+  /phin/3.2.0:
+    dependencies:
+      centra: 2.2.0
+    dev: false
+    resolution:
+      integrity: sha512-gtg2mdKvLDOzNtVsXOui5o9Zjgmkp46FUTjxB1mLGKgR2mhJiyTSul+OZLwWxRGuVjV3/AEIp8jRD29VjpzY/g==
   /proxy-addr/2.0.4:
     dependencies:
       forwarded: 0.1.2
@@ -369,3 +380,4 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   express: ^4.16.4
+  phin: ^3.2.0
