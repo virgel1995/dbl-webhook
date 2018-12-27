@@ -3,11 +3,7 @@ dbl-discord-webhook
 
 This code is made by [Telk](https://glitch.com/@telkenes)
 
-
-Find out more [about Glitch](https://glitch.com/about).
-
-
-
+Github Repo: [Click Here](https://github.com/telkenes/dbl-discord-webhook)
 
 -------------------
 

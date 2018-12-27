@@ -15,6 +15,7 @@ app.get("/", function (req, res) {
 });
 
 app.post("/hook", async (req, res) => {
+  if ('a' === 'a') res.send('this is a demo') //remove this line to make this code useable
   if (req.headers.authorization !== config.auth) return res.send({code: "invalid auth"})
   let user_id = req.body.user;
   let bot = req.body.bot;
@@ -30,6 +31,6 @@ app.post("/hook", async (req, res) => {
     res.send({code: "success"});
 });
 
-var listener = app.listen(process.env.PORT, function () {
+let listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
