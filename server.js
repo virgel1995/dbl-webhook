@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 });
 
 app.post("/hook", async (req, res) => {
-  if ('a' === 'a') res.send('this is a demo') //remove this line to make this code useable
+  if ('a' === 'a') return res.send('this is a demo') //remove this line to make this code useable
   if (req.headers.authorization !== config.auth) return res.send({code: "invalid auth"})
   let user_id = req.body.user;
   let bot = req.body.bot;
