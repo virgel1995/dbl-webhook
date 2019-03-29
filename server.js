@@ -31,6 +31,10 @@ app.post("/hook", async (req, res) => {
     res.send({code: "success"});
 });
 
+app.use("/", function(req, res) {
+res.send({"error": "404 page not found"})
+})
+
 let listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });

@@ -5,6 +5,7 @@ a Simple way to see who voted your bot.
 __How to use__
 * download code from [github](https://github.com/telkenes/dbl-discord-webhook) or remix this project
 * edit config.json to your needs
+* remove line 18 in the code
 * if you are using [glitch](https://glitch.com) to host use [uptimerobot](https://uptimerobot.com)
 
 __config.json__
@@ -17,10 +18,14 @@ __Disclaimers__
 * Votes are not saved in any form
 * The webhook will only fire when this project is online
 
-__Links__
-* [Github](https://github.com/telkenes/dbl-discord-webhook)
+__Github__
+* [Repo](https://github.com/telkenes/dbl-discord-webhook)
+* [Javascript Version](https://github.com/telkenes/dbl-discord-webhook#javascript)
+* [Python Version](https://github.com/telkenes/dbl-discord-webhook#python)
+
+__Glitch demos__
 * [Javascript Version](https://glitch.com/~dbl-discord-webhook-js)
 * [Python Version](https://glitch.com/~dbl-discord-webhook-py)
 
 -------------------
-Credits: [Telk](https://glitch.com/@telkenes)
+Credits: [Telk](https://github.com/telkenes)
