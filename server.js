@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get("/", function (req, res) {
-  res.send("dis is not a website kthx")
+  res.send({"message": "this is not a website kthx"})
 });
 
 app.post("/hook", async (req, res) => {
